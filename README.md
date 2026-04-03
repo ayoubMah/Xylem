@@ -21,14 +21,28 @@ The goal isn't just to store bytes—it's to measure exactly how different data 
 
 ## Project Roadmap (Progress Log)
 
-### Phase 1: The Foundation
-- [ ] The Page: Implementing fixed-size disk blocks.
-- [ ] Buffer Pool Manager: Moving pages between disk and RAM without blowing up memory.
-- [ ] WAL (Write-Ahead Log): Ensuring "Atomic" and "Durable" aren't just buzzwords.
-
-### Phase 2: The B-Tree Engine
-- [ ] Node splitting & merging algorithms.
-- [ ] Disk-based persistence (traversing files, not just RAM).
+### Lab A: The B-Tree Decomposition
+- [ ] **A.1: The Page & Serialization (The Physical Layer)**
+  - *Goal:* Define the binary layout of a single disk block.
+  - *Focus:* Fixed-size headers, Slotted Page architecture, and converting Go structs to `[]byte`.
+- [ ] **A.2: The Disk Manager (The I/O Layer)**
+  - *Goal:* Efficiently read/write pages to a file using pwrite and pread.
+  - *Focus:* Mapping Page IDs to file offsets.
+- [ ] **A.3: The Buffer Pool Manager (The Caching Layer)**
+  - *Goal:* Manage a fixed-size cache of Pages in RAM.
+  - *Focus:* The Replacement Policy (LRU/Clock), "Pinning" pages to prevent eviction while in use, and "Dirty" flags.
+- [ ] **A.4: The Node Interface (The Structural Layer)**
+  - *Goal:* Differentiate between Internal Nodes (pointers to other pages) and Leaf Nodes (actual Key-Value data).
+  - *Focus:* Search within a single page (Binary Search).
+- [ ] **A.5: The Tree Traversal (The Read Path)**
+  - *Goal:* Implement `Get(key)`.
+  - *Focus:* Navigating from Root to Leaf.
+- [ ] **A.6: The Split (The Write Path)**
+  - *Goal:* Handle page overflows during `Put(key, value)`.
+  - *Focus:* Allocating new pages, re-balancing, and updating the parent.
+- [ ] **A.7: The Delete (The Rebalancing Layer)**
+  - *Goal:* Handle page underflows (merging or borrowing).
+  - *Focus:* Managing the 50% occupancy rule.
 
 ### Phase 3: The LSM Engine
 - [ ] MemTable: In-memory sorted buffers.
