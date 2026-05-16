@@ -1,23 +1,18 @@
 # Binaries for programs and plugins
-<<<<<<< HEAD
-=======
 bin/
->>>>>>> d294a8d (1st commit)
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
-<<<<<<< HEAD
-# Test binary, built with `go test -c`
+# Go workspace and pkg directories
+pkg/
+vendor/
+
+# Test binaries and coverage
 *.test
-
-# Output of the go coverage tool
 *.out
-
-# Dependency directories (remove the comment below to include it)
-# vendor/
 
 # Go workspace file
 go.work
@@ -26,7 +21,7 @@ go.work.sum
 # Environment variables
 .env
 
-# Ignore IDE files
+# Ignore IDE and editor files
 .idea/
 .vscode/
 *.swp
@@ -34,13 +29,3 @@ go.work.sum
 # OS generated files
 .DS_Store
 Thumbs.db
-=======
-# Go workspace and pkg directories
-pkg/
-
-# Test binary
-*.test
-
-# OS specific files
-.DS_Store
->>>>>>> d294a8d (1st commit)
