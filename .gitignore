@@ -1,10 +1,15 @@
 # Binaries for programs and plugins
+<<<<<<< HEAD
+=======
+bin/
+>>>>>>> d294a8d (1st commit)
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
+<<<<<<< HEAD
 # Test binary, built with `go test -c`
 *.test
 
@@ -29,3 +34,13 @@ go.work.sum
 # OS generated files
 .DS_Store
 Thumbs.db
+=======
+# Go workspace and pkg directories
+pkg/
+
+# Test binary
+*.test
+
+# OS specific files
+.DS_Store
+>>>>>>> d294a8d (1st commit)
