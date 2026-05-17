@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// stage1
-	// store := NewKVStore()
+	// store := NewKVStore(0)
 	//
 	// store.Set("name", []byte("Aub"))
 	// store.Set("lang", []byte("Go"))
@@ -33,7 +33,7 @@ func main() {
 }
 
 func measureGrowth() {
-	store := NewKVStore() // change it with make(map[string][]byte, 10000) and test again and change the line 42 to 43
+	store := NewKVStore(0) // change it with make(map[string][]byte, 10000) and test again and change the line 42 to 43
 
 	threshold := 2 * time.Microsecond
 
@@ -53,7 +53,7 @@ func measureGrowth() {
 }
 
 func simulateTraffic() {
-	store := NewKVStore()
+	store := NewKVStore(0)
 	store.Set("status", []byte("running"))
 
 	// 1 Writer trying to update the map

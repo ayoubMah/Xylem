@@ -9,9 +9,9 @@ type KVStore struct {
 	data map[string][]byte
 }
 
-func NewKVStore() *KVStore {
+func NewKVStore(capacity int) *KVStore {
 	return &KVStore{
-		data: make(map[string][]byte),
+		data: make(map[string][]byte, capacity),
 	}
 }
 
