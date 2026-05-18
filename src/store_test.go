@@ -28,3 +28,14 @@ func BenchmarkSetParallel(b *testing.B) {
 		}
 	})
 }
+
+func BenchmarkGetParallel(b *testing.B) {
+	store := NewKVStore(1)
+	store.Set("key", []byte("value"))
+	b.ResetTimer()
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			store.Get("key")
+		}
+	})
+}
