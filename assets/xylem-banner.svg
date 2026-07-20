@@ -1,0 +1,64 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="40%" r="90%">
+      <stop offset="0%" stop-color="#12312A"/>
+      <stop offset="100%" stop-color="#081712"/>
+    </radialGradient>
+    <linearGradient id="drop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7BE495"/>
+      <stop offset="55%" stop-color="#52E0D0"/>
+      <stop offset="100%" stop-color="#2BB3A3"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#52E0D0"/>
+      <stop offset="100%" stop-color="#7BE495"/>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7BE495"/>
+      <stop offset="100%" stop-color="#52E0D0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="360" rx="40" fill="url(#bg)"/>
+
+  <!-- icon -->
+  <g transform="translate(70,40) scale(0.55)">
+    <path d="M256 88
+             C 256 88, 148 236, 148 326
+             A 108 108 0 0 0 364 326
+             C 364 236, 256 88, 256 88 Z"
+          fill="#52E0D0" fill-opacity="0.06"
+          stroke="url(#drop)" stroke-width="17" stroke-linejoin="round"/>
+    <g stroke="#7BE495" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.95">
+      <path d="M204 352 C 204 322, 210 306, 222 292"/>
+      <path d="M240 356 C 238 330, 232 310, 226 296"/>
+      <path d="M272 356 C 274 330, 280 310, 286 296"/>
+      <path d="M308 352 C 308 322, 302 306, 290 292"/>
+      <path d="M224 276 C 226 250, 238 230, 250 216"/>
+      <path d="M288 276 C 286 250, 274 230, 262 216"/>
+    </g>
+    <path d="M256 192 L 256 138" stroke="url(#flow)" stroke-width="9" stroke-linecap="round" stroke-dasharray="1 20"/>
+    <g fill="#52E0D0">
+      <circle cx="204" cy="366" r="12"/>
+      <circle cx="240" cy="370" r="12"/>
+      <circle cx="272" cy="370" r="12"/>
+      <circle cx="308" cy="366" r="12"/>
+      <circle cx="224" cy="288" r="13" fill="#63E8C8"/>
+      <circle cx="288" cy="288" r="13" fill="#63E8C8"/>
+      <circle cx="256" cy="204" r="16" fill="#7BE495"/>
+    </g>
+  </g>
+
+  <!-- wordmark -->
+  <text x="380" y="192" font-family="ui-monospace, 'JetBrains Mono', 'Fira Code', Menlo, monospace"
+        font-size="120" font-weight="700" letter-spacing="14" fill="url(#word)">XYLEM</text>
+  <text x="386" y="252" font-family="ui-monospace, 'JetBrains Mono', 'Fira Code', Menlo, monospace"
+        font-size="30" letter-spacing="6" fill="#9DBBB0">a storage engine, grown in Go</text>
+
+  <!-- subtle vessel lines on the right -->
+  <g stroke="#1E4A3E" stroke-width="3" fill="none" opacity="0.8">
+    <path d="M1050 320 C 1050 240, 1070 180, 1060 40"/>
+    <path d="M1095 320 C 1095 230, 1080 160, 1092 40"/>
+    <path d="M1140 320 C 1140 250, 1125 150, 1135 40"/>
+  </g>
+</svg>

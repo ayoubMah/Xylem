@@ -1,7 +1,4 @@
-<p align="center">
-  <img src="logo.png" width="300" alt="Xylem Logo"><br/>
-  <b>Xylem: The Storage Lab</b>
-</p>
+<p align="center"><img src="assets/xylem-banner.svg" width="800" alt="Xylem"/></p>
 
 # Building a Database from Scratch — Go
 
