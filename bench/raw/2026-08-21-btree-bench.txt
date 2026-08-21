@@ -1,0 +1,31 @@
+goos: windows
+goarch: amd64
+pkg: github.com/ayoubMah/Xylem/btree
+cpu: 13th Gen Intel(R) Core(TM) i5-1335U
+BenchmarkSearch/t=2-12          	 3635226	       318.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=2-12          	 4032433	       279.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=2-12          	 4331697	       299.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=2-12          	 4573170	       327.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=2-12          	 4302066	       299.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=32-12         	12038994	        99.79 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=32-12         	12323023	        98.05 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=32-12         	12301597	       101.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=32-12         	11972379	        99.64 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=32-12         	11915896	        99.00 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=128-12        	13315149	        91.16 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=128-12        	13535126	        91.63 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=128-12        	13575596	        90.90 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=128-12        	13371843	        91.68 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSearch/t=128-12        	13313496	        90.68 ns/op	       0 B/op	       0 allocs/op
+BenchmarkInsertSequential-12    	26080209	        53.27 ns/op	      27 B/op	       0 allocs/op
+BenchmarkInsertSequential-12    	31028677	        47.89 ns/op	      27 B/op	       0 allocs/op
+BenchmarkInsertSequential-12    	31477886	        47.19 ns/op	      27 B/op	       0 allocs/op
+BenchmarkInsertSequential-12    	30633187	        46.66 ns/op	      27 B/op	       0 allocs/op
+BenchmarkInsertSequential-12    	31005267	        47.02 ns/op	      27 B/op	       0 allocs/op
+BenchmarkInsertRandom-12        	 4739778	       394.2 ns/op	      19 B/op	       0 allocs/op
+BenchmarkInsertRandom-12        	 4761376	       397.0 ns/op	      19 B/op	       0 allocs/op
+BenchmarkInsertRandom-12        	 4853488	       394.6 ns/op	      19 B/op	       0 allocs/op
+BenchmarkInsertRandom-12        	 4394179	       384.9 ns/op	      19 B/op	       0 allocs/op
+BenchmarkInsertRandom-12        	 4662006	       396.3 ns/op	      19 B/op	       0 allocs/op
+PASS
+ok  	github.com/ayoubMah/Xylem/btree	78.477s

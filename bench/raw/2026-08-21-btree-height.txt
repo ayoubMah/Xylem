@@ -1,0 +1,22 @@
+=== RUN   TestHeightSequentialVsRandom
+    height_test.go:74: B-Tree with t=2 (nodes hold 1-3 keys), against a naive unbalanced BST
+    height_test.go:75: n         order          height    nodes     fill   log2(n)   BST height
+    height_test.go:104: 1000      sequential          9      992    33.6%      10.0         1000
+    height_test.go:104: 1000      random              8      575    58.0%      10.0           22
+    height_test.go:104: 10000     sequential         13     9992    33.4%      13.3        10000
+    height_test.go:104: 10000     random             11     5653    59.0%      13.3           32
+    height_test.go:104: 100000    sequential         16    99990    33.3%      16.6       100000
+    height_test.go:104: 100000    random             13    57033    58.4%      16.6           39
+--- PASS: TestHeightSequentialVsRandom (7.41s)
+=== RUN   TestHeightAcrossDegrees
+    height_test.go:121: 100000 random keys
+    height_test.go:122: t        max keys   height    nodes      fill   reads/lookup
+    height_test.go:135: 2               3       13    56846     58.6%             13
+    height_test.go:135: 4               7        7    21623     66.1%              7
+    height_test.go:135: 8              15        5     9774     68.2%              5
+    height_test.go:135: 32             63        3     2320     68.4%              3
+    height_test.go:135: 128           255        3      552     71.0%              3
+    height_test.go:135: 256           511        2      257     76.1%              2
+--- PASS: TestHeightAcrossDegrees (0.16s)
+PASS
+ok  	github.com/ayoubMah/Xylem/btree	9.204s
