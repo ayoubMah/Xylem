@@ -1,0 +1,26 @@
+goos: windows
+goarch: amd64
+pkg: github.com/ayoubMah/Xylem/bitcask
+cpu: 13th Gen Intel(R) Core(TM) i5-1335U
+BenchmarkOpen1k-12      	      33	  32380206 ns/op	  485911 B/op	    6028 allocs/op
+BenchmarkOpen1k-12      	      31	  37438590 ns/op	  485948 B/op	    6029 allocs/op
+BenchmarkOpen1k-12      	      36	  32098178 ns/op	  485902 B/op	    6029 allocs/op
+BenchmarkOpen1k-12      	      46	  26338272 ns/op	  485903 B/op	    6028 allocs/op
+BenchmarkOpen1k-12      	      40	  28148312 ns/op	  485914 B/op	    6028 allocs/op
+BenchmarkOpen10k-12     	       6	 184248417 ns/op	 4637180 B/op	   60095 allocs/op
+BenchmarkOpen10k-12     	       6	 180448733 ns/op	 4637140 B/op	   60094 allocs/op
+BenchmarkOpen10k-12     	       6	 176701467 ns/op	 4637185 B/op	   60095 allocs/op
+BenchmarkOpen10k-12     	       6	 185882883 ns/op	 4637188 B/op	   60095 allocs/op
+BenchmarkOpen10k-12     	       6	 179994750 ns/op	 4637310 B/op	   60096 allocs/op
+BenchmarkOpen100k-12    	       1	2096154600 ns/op	44616624 B/op	  600603 allocs/op
+BenchmarkOpen100k-12    	       1	2057319400 ns/op	44617472 B/op	  600614 allocs/op
+BenchmarkOpen100k-12    	       1	1810305700 ns/op	44616272 B/op	  600599 allocs/op
+BenchmarkOpen100k-12    	       1	1764448700 ns/op	44616272 B/op	  600599 allocs/op
+BenchmarkOpen100k-12    	       1	1706243400 ns/op	44617040 B/op	  600608 allocs/op
+BenchmarkMerge-12       	      12	 102268958 ns/op	  565390 B/op	    6244 allocs/op
+BenchmarkMerge-12       	       8	 148139362 ns/op	  568182 B/op	    6359 allocs/op
+BenchmarkMerge-12       	      10	 131401820 ns/op	  566483 B/op	    6290 allocs/op
+BenchmarkMerge-12       	      18	 111509022 ns/op	  563760 B/op	    6168 allocs/op
+BenchmarkMerge-12       	      13	 119106369 ns/op	  565129 B/op	    6227 allocs/op
+PASS
+ok  	github.com/ayoubMah/Xylem/bitcask	78.696s

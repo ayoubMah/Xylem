@@ -1,0 +1,16 @@
+=== RUN   TestSpaceAmplification
+    spaceamp_test.go:42: live set: 1000 keys x 132 B/record = 132000 B
+    spaceamp_test.go:43: overwrites      before(B)       after(B)        amp  reclaimed
+    spaceamp_test.go:72: 1                  132000         132000       1.00       0.0%
+    spaceamp_test.go:72: 2                  264000         132000       2.00      50.0%
+    spaceamp_test.go:72: 5                  660000         132000       5.00      80.0%
+    spaceamp_test.go:72: 10                1320000         132000      10.00      90.0%
+    spaceamp_test.go:72: 50                6600000         132000      50.00      98.0%
+--- PASS: TestSpaceAmplification (1.01s)
+=== RUN   TestDeleteSpaceCost
+    spaceamp_test.go:124: after 1000 writes:          132000 B
+    spaceamp_test.go:125: after 500 deletes:          148000 B  (+16000 B -- deletes GROW the log)
+    spaceamp_test.go:127: after Merge:               66000 B  (44.6% of peak)
+--- PASS: TestDeleteSpaceCost (0.10s)
+PASS
+ok  	github.com/ayoubMah/Xylem/bitcask	2.787s
