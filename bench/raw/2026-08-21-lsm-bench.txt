@@ -1,0 +1,108 @@
+=== access pattern: non-sync (3000x x5) ===
+goos: windows
+goarch: amd64
+pkg: github.com/ayoubMah/Xylem/lsm
+cpu: 13th Gen Intel(R) Core(TM) i5-1335U
+BenchmarkPattern_RandomInPlace-12       	    3000	     30266 ns/op	   4.23 MB/s
+BenchmarkPattern_RandomInPlace-12       	    3000	     28158 ns/op	   4.55 MB/s
+BenchmarkPattern_RandomInPlace-12       	    3000	     36738 ns/op	   3.48 MB/s
+BenchmarkPattern_RandomInPlace-12       	    3000	     40855 ns/op	   3.13 MB/s
+BenchmarkPattern_RandomInPlace-12       	    3000	     31899 ns/op	   4.01 MB/s
+BenchmarkPattern_SequentialAppend-12    	    3000	      2900 ns/op	  44.14 MB/s
+BenchmarkPattern_SequentialAppend-12    	    3000	      3435 ns/op	  37.27 MB/s
+BenchmarkPattern_SequentialAppend-12    	    3000	      2958 ns/op	  43.27 MB/s
+BenchmarkPattern_SequentialAppend-12    	    3000	      4651 ns/op	  27.52 MB/s
+BenchmarkPattern_SequentialAppend-12    	    3000	      6655 ns/op	  19.23 MB/s
+
+=== access pattern: sync (200x x5) ===
+BenchmarkPattern_RandomInPlaceSync-12       	     200	   1216610 ns/op
+BenchmarkPattern_RandomInPlaceSync-12       	     200	   1186256 ns/op
+BenchmarkPattern_RandomInPlaceSync-12       	     200	   1310318 ns/op
+BenchmarkPattern_RandomInPlaceSync-12       	     200	   1219213 ns/op
+BenchmarkPattern_RandomInPlaceSync-12       	     200	   1221072 ns/op
+BenchmarkPattern_SequentialAppendSync-12    	     200	   1159222 ns/op
+BenchmarkPattern_SequentialAppendSync-12    	     200	   1068578 ns/op
+BenchmarkPattern_SequentialAppendSync-12    	     200	   1195994 ns/op
+BenchmarkPattern_SequentialAppendSync-12    	     200	   1321037 ns/op
+BenchmarkPattern_SequentialAppendSync-12    	     200	   1427113 ns/op
+
+=== access pattern: batched (5000x x5) ===
+BenchmarkPattern_BatchedSequential-12    	    5000	      4404 ns/op
+BenchmarkPattern_BatchedSequential-12    	    5000	      5594 ns/op
+BenchmarkPattern_BatchedSequential-12    	    5000	      4760 ns/op
+BenchmarkPattern_BatchedSequential-12    	    5000	      4381 ns/op
+BenchmarkPattern_BatchedSequential-12    	    5000	      4525 ns/op
+
+=== engines: write (3000x x5) ===
+BenchmarkWrite_Bitcask-12        	    3000	      4682 ns/op	     256 B/op	       3 allocs/op
+BenchmarkWrite_Bitcask-12        	    3000	      4310 ns/op	     256 B/op	       3 allocs/op
+BenchmarkWrite_Bitcask-12        	    3000	      4952 ns/op	     256 B/op	       3 allocs/op
+BenchmarkWrite_Bitcask-12        	    3000	      4553 ns/op	     256 B/op	       3 allocs/op
+BenchmarkWrite_Bitcask-12        	    3000	      6702 ns/op	     256 B/op	       3 allocs/op
+BenchmarkWrite_LSM-12            	    3000	     14152 ns/op	     615 B/op	       7 allocs/op
+BenchmarkWrite_LSM-12            	    3000	     15353 ns/op	     615 B/op	       7 allocs/op
+BenchmarkWrite_LSM-12            	    3000	     13785 ns/op	     615 B/op	       7 allocs/op
+BenchmarkWrite_LSM-12            	    3000	     13277 ns/op	     615 B/op	       7 allocs/op
+BenchmarkWrite_LSM-12            	    3000	     11442 ns/op	     615 B/op	       7 allocs/op
+BenchmarkOverwrite_Bitcask-12    	    3000	      8002 ns/op	     184 B/op	       3 allocs/op
+BenchmarkOverwrite_Bitcask-12    	    3000	      5858 ns/op	     184 B/op	       3 allocs/op
+BenchmarkOverwrite_Bitcask-12    	    3000	      8332 ns/op	     184 B/op	       3 allocs/op
+BenchmarkOverwrite_Bitcask-12    	    3000	     12741 ns/op	     184 B/op	       3 allocs/op
+BenchmarkOverwrite_Bitcask-12    	    3000	      4646 ns/op	     184 B/op	       3 allocs/op
+BenchmarkOverwrite_LSM-12        	    3000	      8776 ns/op	     364 B/op	       5 allocs/op
+BenchmarkOverwrite_LSM-12        	    3000	      8797 ns/op	     364 B/op	       5 allocs/op
+BenchmarkOverwrite_LSM-12        	    3000	      7262 ns/op	     364 B/op	       5 allocs/op
+BenchmarkOverwrite_LSM-12        	    3000	      6079 ns/op	     364 B/op	       5 allocs/op
+BenchmarkOverwrite_LSM-12        	    3000	      6257 ns/op	     364 B/op	       5 allocs/op
+
+=== engines: read (2000x x5) ===
+BenchmarkRead_Bitcask-12    	    2000	     23886 ns/op	     383 B/op	       6 allocs/op
+BenchmarkRead_Bitcask-12    	    2000	     26693 ns/op	     383 B/op	       6 allocs/op
+BenchmarkRead_Bitcask-12    	    2000	     19255 ns/op	     383 B/op	       6 allocs/op
+BenchmarkRead_Bitcask-12    	    2000	     76858 ns/op	     383 B/op	       6 allocs/op
+BenchmarkRead_Bitcask-12    	    2000	     35289 ns/op	     384 B/op	       6 allocs/op
+BenchmarkRead_LSM-12        	    2000	     16725 ns/op	     296 B/op	       5 allocs/op
+BenchmarkRead_LSM-12        	    2000	     18569 ns/op	     296 B/op	       5 allocs/op
+BenchmarkRead_LSM-12        	    2000	     19447 ns/op	     295 B/op	       5 allocs/op
+BenchmarkRead_LSM-12        	    2000	     21060 ns/op	     295 B/op	       5 allocs/op
+BenchmarkRead_LSM-12        	    2000	     17363 ns/op	     297 B/op	       5 allocs/op
+
+=== read amplification + bloom control (3000x x5) ===
+BenchmarkReadMiss_1Table-12              	    3000	       174.8 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_1Table-12              	    3000	       176.0 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_1Table-12              	    3000	       179.8 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_1Table-12              	    3000	       215.3 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_1Table-12              	    3000	       182.7 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_4Tables-12             	    3000	       315.9 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_4Tables-12             	    3000	       551.2 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_4Tables-12             	    3000	       514.6 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_4Tables-12             	    3000	       305.1 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_4Tables-12             	    3000	       386.0 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_16Tables-12            	    3000	      1062 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_16Tables-12            	    3000	      2625 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_16Tables-12            	    3000	      1141 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_16Tables-12            	    3000	       968.6 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_16Tables-12            	    3000	       922.8 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_32Tables-12            	    3000	      1617 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_32Tables-12            	    3000	      2839 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_32Tables-12            	    3000	      1759 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_32Tables-12            	    3000	      2001 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_32Tables-12            	    3000	      1803 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_NoBloom_16Tables-12    	    3000	      1265 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_NoBloom_16Tables-12    	    3000	      1256 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_NoBloom_16Tables-12    	    3000	      1206 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_NoBloom_16Tables-12    	    3000	      1670 ns/op	      23 B/op	       1 allocs/op
+BenchmarkReadMiss_NoBloom_16Tables-12    	    3000	      1555 ns/op	      24 B/op	       1 allocs/op
+
+=== space amplification + bloom FP rate ===
+    accesspattern_test.go:226: overwrite x1   -> WAL    59500 B (grows with every write)  SSTable   69666 B (one entry per key)  amp 1.30x
+    accesspattern_test.go:226: overwrite x2   -> WAL   119000 B (grows with every write)  SSTable   69666 B (one entry per key)  amp 1.30x
+    accesspattern_test.go:226: overwrite x5   -> WAL   297500 B (grows with every write)  SSTable   69666 B (one entry per key)  amp 1.30x
+    accesspattern_test.go:226: overwrite x10  -> WAL   595000 B (grows with every write)  SSTable   69666 B (one entry per key)  amp 1.30x
+    accesspattern_test.go:226: overwrite x50  -> WAL  2975000 B (grows with every write)  SSTable   69666 B (one entry per key)  amp 1.30x
+--- PASS: TestOverwriteSpaceAmplification (0.41s)
+    db_test.go:361: space: 198910 B before -> 19891 B after compaction (10.00x reclaimed, overwrite factor 10)
+--- PASS: TestCompactionReclaimsSpace (0.19s)
+    db_test.go:550: bloom: 10 bits/key, k=7 -> false-positive rate 0.803% (803/100000)
+--- PASS: TestBloomFalsePositiveRate (0.02s)
+PASS
